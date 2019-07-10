@@ -30,7 +30,8 @@ class PostsController < ApplicationController
 	private
 	
 	def post_params
-	  params.require.permit
+	  # params.require(:student).permit(:name, :birthday, :hometown)
+	  params.require(:post).permit(:title, :content)
 	end
 	
 	
